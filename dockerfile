@@ -6,4 +6,7 @@ RUN mkdir /opt/app
 COPY src/* /opt/app/
 COPY requirements.txt /opt/app
 RUN pip install -r /opt/app/requirements.txt
+
+EXPOSE 5000
+
 ENTRYPOINT FLASK_APP=/opt/app/main.py flask run
