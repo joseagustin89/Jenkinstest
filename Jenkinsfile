@@ -18,7 +18,7 @@ pipeline {
         stage('ejecutando la aplicacion') {
             steps {
                 sh '''
-                        bash -c "FLASK_APP=src/main.py flask run"
+                        bash -c "FLASK_APP=src/main.py flask run &"
                 '''
             }
         }
